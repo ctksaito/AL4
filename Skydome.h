@@ -3,7 +3,9 @@
 #include "Model.h"
 #include "WorldTransform.h"
 
-class Player {
+// スカイドーム
+class Skydome {
+
 public:
 	// 初期化
 	void Initialize(Model* model);
@@ -15,7 +17,7 @@ public:
 	void Draw(const ViewProjection& viewProjection);
 
 private:
-	//ワールド変換データ
+	// ワールド変換データ
 	WorldTransform worldTransform_;
 	// モデル
 	Model* model_ = nullptr;

@@ -1,13 +1,11 @@
-﻿#include "Player.h"
-//#include "ImGuiManager.h"
-//#include "Vector3.h"
+﻿#include "Ground.h"
 #include <cassert>
 
-void Player::Initialize(Model* model) {
+void Ground::Initialize(Model* model) {
 
 	// NULLポインタチェック
 	assert(model);
-	
+
 	// メンバ変数に受け取った値を代入
 	model_ = model;
 
@@ -15,9 +13,9 @@ void Player::Initialize(Model* model) {
 	worldTransform_.Initialize();
 }
 
-void Player::Update() {}
+void Ground::Update() {}
 
-void Player::Draw(const ViewProjection& viewProjection) {
+void Ground::Draw(const ViewProjection& viewProjection) {
 	// 3Dモデルを描画
 	model_->Draw(worldTransform_, viewProjection, textureHandle_);
 }
